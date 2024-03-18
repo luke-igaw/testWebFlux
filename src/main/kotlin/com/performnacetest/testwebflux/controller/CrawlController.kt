@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import reactor.core.publisher.Mono
 
+data class CrawlRequest(val url: String)
+
 @Controller
 class CrawlController(private val crawlerService: CrawlService) {
 
     @PostMapping("/crawl")
-    fun crawlAndSave(@RequestBody url: String): Mono<ResponseEntity<String>> {
-        return crawlerService.crawlAndSave(url)
+    fun crawlAndSave(@RequestBody request: CrawlRequest): Mono<ResponseEntity<String>> {
+        return crawlerService.crawlAndSave(request.url)
             .map { content ->
                 ResponseEntity.ok(content)
             }
@@ -22,3 +24,4 @@ class CrawlController(private val crawlerService: CrawlService) {
             }
     }
 }
+
