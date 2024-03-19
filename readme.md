@@ -9,4 +9,4 @@
 
 - Send GET and POST requests to each module simultaneously with 1000 threads (users).
 - Evaluate the scalability and throughput of each module when handling multiple concurrent requests.
-- Use Jmeter and etc.
+- Use Apache benchmark
