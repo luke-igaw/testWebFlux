@@ -1,7 +1,7 @@
 package com.performnacetest.testwebflux.service
 
 import com.performnacetest.testwebflux.entity.WebPage
-import com.performnacetest.testwebflux.repositories.WebPageRepository
+import com.performnacetest.testwebflux.repository.WebPageRepository
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 
