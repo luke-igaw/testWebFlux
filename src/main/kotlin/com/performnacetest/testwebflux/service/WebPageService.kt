@@ -12,4 +12,8 @@ class WebPageService(private val webPageRepository: WebPageRepository) {
         val webPage = WebPage(null, url, title)
         return webPageRepository.save(webPage).then()
     }
+
+    fun getFirstWebPage(): Mono<WebPage> {
+        return webPageRepository.findAll().next()
+    }
 }
