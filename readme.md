@@ -9,4 +9,9 @@
 
 - Send GET and POST requests to each module simultaneously with 1000 threads (users).
 - Evaluate the scalability and throughput of each module when handling multiple concurrent requests.
-- Use Apache benchmark
+- Use MongoDB
+- Use Apache benchmark and Wrk
+
+## Result Summary
+
+- **WebFlux wins in response speed, R.P.S, CPU usage, etc.**
