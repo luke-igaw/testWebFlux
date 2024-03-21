@@ -14,4 +14,5 @@
 
 ## Result Summary
 
-- **WebFlux wins in response speed, R.P.S, CPU usage, etc.**
+- **There is no significant difference when concurrency is low, but as the concurrency increases, webflux looks better
+  in stability and response speed**
